@@ -19,6 +19,7 @@
     </header>
     <main>
         <section class="container">
+
             <h2>Meus pacientes</h2>
             <table>
                 <thead>
@@ -64,7 +65,7 @@
                     </tr>
                     <tr class="paciente">
                         <td class="info-nome">Tatiana</td>
-                        <td class="info-peso">50</td>
+                        <td class="info-peso">48</td>
                         <td class="info-altura">1.55</td>
                         <td class="info-gordura">19</td>
                         <td class="info-imc">0</td>
@@ -75,6 +76,9 @@
         </section>
         <section class="container">
             <h2 id="titulo-form">Adicionar novo paciente</h2>
+            <ul id="mensagens-erro">
+                <li></li>
+            </ul>
             <form id="form-adiciona">
                 <div class="">
                     <label for="nome">Nome:</label>
@@ -97,7 +101,8 @@
             </form>
         </section>
     </main>
-    <script src="js/main.js"></script>
+    <script src="js/calcula-imc.js"></script>
+    <script src="js/form.js"></script>
 
 </body>
 
