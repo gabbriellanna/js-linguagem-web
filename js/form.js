@@ -6,8 +6,6 @@ botaoAdicionar.addEventListener("click", function(event) {
 
     let paciente = obtemPacienteForm(form);
 
-    let pacienteTr = montaTr(paciente);
-
     let erros = validaPaciente(paciente);
     console.log(erros);
 
@@ -16,9 +14,7 @@ botaoAdicionar.addEventListener("click", function(event) {
         return; //deixar o return vazio faz com que o código saia antes de adicionar os dados na tabela 
     }
 
-    var tabela = document.querySelector("#tabela-pacientes");
-
-    tabela.appendChild(pacienteTr);
+    addPacienteTabela(paciente);
 
     form.reset();
     let msgsErro = document.querySelector("#mensagens-erro");
@@ -34,6 +30,14 @@ function obtemPacienteForm(form) {
         imc: calculaImc(form.peso.value, form.altura.value)
     }
     return paciente
+}
+
+function addPacienteTabela(paciente) {
+    let pacienteTr = montaTr(paciente);
+    var tabela = document.querySelector("#tabela-pacientes");
+    tabela.appendChild(pacienteTr);
+
+
 }
 
 function exibeMsgsErro(erros) {
